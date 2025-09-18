@@ -1,0 +1,94 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Custom spacing and styling improvements */
+@layer components {
+    /* Card improvements */
+    .card {
+        @apply bg-white dark:bg-gray-800 rounded-xl shadow-lg overflow-hidden transition-all duration-300;
+    }
+    
+    .card:hover {
+        @apply shadow-xl transform -translate-y-1;
+    }
+    
+    /* Button improvements */
+    .btn {
+        @apply inline-flex items-center justify-center px-6 py-3 rounded-lg font-medium transition-all duration-200;
+    }
+    
+    .btn-primary {
+        @apply bg-blue-600 text-white hover:bg-blue-700 focus:ring-4 focus:ring-blue-300;
+    }
+    
+    .btn-secondary {
+        @apply bg-gray-600 text-white hover:bg-gray-700 focus:ring-4 focus:ring-gray-300;
+    }
+    
+    /* Content spacing improvements */
+    .content-section {
+        @apply py-16 px-6 sm:px-8 lg:px-10;
+    }
+    
+    .content-container {
+        @apply max-w-7xl mx-auto;
+    }
+    
+    /* Typography improvements */
+    .heading-xl {
+        @apply text-4xl md:text-6xl font-bold mb-6;
+    }
+    
+    .heading-lg {
+        @apply text-2xl md:text-3xl font-bold mb-4;
+    }
+    
+    .text-content {
+        @apply text-gray-600 dark:text-gray-300 leading-relaxed;
+    }
+    
+    /* Navigation improvements */
+    .nav-item {
+        @apply px-4 py-2 rounded-lg transition-colors duration-200;
+    }
+    
+    .nav-item:hover {
+        @apply bg-gray-100 dark:bg-gray-700;
+    }
+    
+    /* Form improvements */
+    .form-input {
+        @apply block w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg shadow-sm focus:ring-2 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:text-white;
+    }
+    
+    .form-label {
+        @apply block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2;
+    }
+}
+
+/* Custom utilities for better spacing */
+@layer utilities {
+    .line-clamp-3 {
+        display: -webkit-box;
+        -webkit-line-clamp: 3;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+    }
+    
+    .container-padding {
+        @apply px-6 sm:px-8 lg:px-10;
+    }
+    
+    .section-spacing {
+        @apply py-16;
+    }
+    
+    .element-spacing {
+        @apply mb-8;
+    }
+    
+    .content-spacing {
+        @apply space-y-6;
+    }
+}
